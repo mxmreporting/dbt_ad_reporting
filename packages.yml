@@ -1,15 +1,14 @@
 packages:
-
+  - git: "https://github.com/mxmreporting/dbt_google_ads_source.git"     
+    revision: "main"
+    
+  - git: "https://github.com/mxmreporting/dbt_microsoft_ads_source.git"     
+    revision: "main"
+  
   - git: "https://github.com/mxmreporting/dbt_google_ads.git"     
     revision: "main"
 
-  - git: "https://github.com/mxmreporting/dbt_google_ads_source.git"     
-    revision: "main"
-
   - git: "https://github.com/mxmreporting/dbt_microsoft_ads.git"     
-    revision: "main"
-
-  - git: "https://github.com/mxmreporting/dbt_microsoft_ads_source.git"     
     revision: "main"
 
   - package: fivetran/amazon_ads
