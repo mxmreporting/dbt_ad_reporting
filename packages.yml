@@ -7,15 +7,15 @@ packages:
     
   - git: "https://github.com/mxmreporting/dbt_pinterest.git" 
     revision: "main"
-  
+    
+  - git: "https://github.com/mxmreporting/dbt_facebook_ads.git" 
+    revision: "main"
+    
   - package: fivetran/amazon_ads
     version: [">=0.3.0", "<0.4.0"]
     
   - package: fivetran/apple_search_ads
     version: [">=0.3.0", "<0.4.0"]
-
-  - package: fivetran/facebook_ads
-    version: [">=0.7.0", "<0.8.0"]
 
   - package: fivetran/linkedin
     version: [">=0.8.0", "<0.9.0"]
