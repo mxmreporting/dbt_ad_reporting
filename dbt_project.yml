@@ -10,10 +10,8 @@ vars:
     ad_reporting__account_passthrough_metrics: []
     ad_reporting__campaign_passthrough_metrics: []
     ad_reporting__ad_group_passthrough_metrics: []
-    ad_reporting__ad_passthrough_metrics: 
-      - name: conversions
-    ad_reporting__keyword_passthrough_metrics: 
-      - name: conversions
+    ad_reporting__ad_passthrough_metrics: []
+    ad_reporting__keyword_passthrough_metrics: []
     ad_reporting__search_passthrough_metrics: []
     "dbt_date:time_zone": "America/New_York"
 
