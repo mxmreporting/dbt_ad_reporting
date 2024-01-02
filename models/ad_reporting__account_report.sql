@@ -30,7 +30,28 @@ aggregated as (
 
     from base
     {{ dbt_utils.group_by(5) }}
-)
-
+),
+-- Video data integration
+    
+all_data as(
 select *
 from aggregated
+
+union all
+
+
+select
+'' as source_relation,
+date(FORMAT_TIMESTAMP("%F %T", airing_data_aired_at_et, "America/New_York")) AS date_day,
+'video' as  platform ,
+CAST(brand_data_id as string) as account_id,
+brand_data_name as account_name,
+sum(CAST(0 as INT64)) as clicks,
+sum(CAST(audience_data_impressions as INT64)) as impressions,
+sum(CAST(airing_data_spend_estimated as FLOAT64)) as spend
+from {{ ref('int_ispot_airings_joined') }}
+group by 1,2,3,4,5
+
+)
+select *
+from all_data
