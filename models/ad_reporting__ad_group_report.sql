@@ -34,7 +34,7 @@ aggregated as (
     from base
     {{ dbt_utils.group_by(9) }}
 ),
---Video data integration
+-- Video data integration
     
 all_data as(
 select *
