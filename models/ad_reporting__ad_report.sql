@@ -60,7 +60,8 @@ cast(spot_data_id as string) as ad_id,
 spot_data_title_short as ad_name,
 sum(CAST(0 as INT64)) as clicks,
 sum(CAST(audience_data_impressions as INT64)) as impressions,
-sum(CAST(airing_data_spend_estimated as FLOAT64)) as spend
+sum(CAST(airing_data_spend_estimated as FLOAT64)) as spend,
+sum(CAST(0 as FLOAT64)) as conversions
 from {{ ref('int_ispot_airings_joined') }}
 group by 1,2,3,4,5,6,7,8,9,10,11
 )
