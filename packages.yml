@@ -1,15 +1,15 @@
 packages:
   - git: "https://github.com/mxmreporting/dbt_google_ads.git"
-    revision: "main"
+    revision: "production"
     
   - git: "https://github.com/mxmreporting/dbt_microsoft_ads.git" 
-    revision: "main"
+    revision: "production"
     
   - git: "https://github.com/mxmreporting/dbt_pinterest.git" 
-    revision: "main"
+    revision: "production"
     
   - git: "https://github.com/mxmreporting/dbt_facebook_ads.git" 
-    revision: "main"
+    revision: "production"
     
   - package: fivetran/amazon_ads
     version: [">=0.3.0", "<0.4.0"]
