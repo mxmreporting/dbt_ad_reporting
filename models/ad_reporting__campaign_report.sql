@@ -52,7 +52,7 @@ source_relation
 ,impressions
 ,spend
 ,conversions    
-from {{ ref('ttd_ads__ad_report') }}     
+from {{ ref('ttd_ads__campaign_report') }}     
     
 )
 
