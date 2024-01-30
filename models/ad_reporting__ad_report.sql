@@ -48,7 +48,7 @@ union all
 
 select
 '' as source_relation,
-date(FORMAT_TIMESTAMP("%F %T", airing_data_aired_at_et, "America/New_York")) AS date_day,
+date(airing_data_aired_at_et) AS date_day,
 'video' as platform,
 cast(brand_data_id as string) as account_id,
 brand_data_name as account_name,
