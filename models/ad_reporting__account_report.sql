@@ -53,6 +53,19 @@ sum(CAST(0 as FLOAT64)) as conversions
 from {{ ref('int_ispot_airings_joined') }}
 group by 1,2,3,4,5
 
+union all
+
+SELECT 
+source_relation
+,date_day
+,platform
+,account_id
+,account_name
+,clicks
+,impressions
+,spend
+,conversions    
+from {{ ref('ttd_ads__account_report') }}
 )
 select *
 from all_data
