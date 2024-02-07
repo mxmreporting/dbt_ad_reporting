@@ -1,4 +1,4 @@
---hello file
+--test
 {% set enabled_packages = get_enabled_packages() %}
 {{ config(enabled=is_enabled(enabled_packages),
     unique_key = ['source_relation','platform','date_day','account_id'],
