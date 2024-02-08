@@ -66,6 +66,7 @@ source_relation
 ,spend
 ,conversions    
 from {{ ref('ttd_ads__account_report') }}
+    
 )
 select *
 from all_data
