@@ -1,4 +1,3 @@
---ad report
 {% set enabled_packages = get_enabled_packages() %}
 {{ config(enabled=is_enabled(enabled_packages),
     unique_key = ['source_relation','platform','date_day','ad_id','ad_group_id','campaign_id','account_id'],
