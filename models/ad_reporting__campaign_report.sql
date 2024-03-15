@@ -52,7 +52,22 @@ source_relation
 ,impressions
 ,spend
 ,conversions    
-from {{ ref('ttd_ads__campaign_report') }}     
+from {{ ref('ttd_ads__campaign_report') }}   
+
+union all
+select
+source_relation,
+date_day,
+platform,
+cast(account_id as string) as account_id,
+account_name,
+cast(campaign_id as string) as campaign_id,
+campaign_name,
+clicks,
+impressions,
+spend,
+cast(conversions as FLOAT64) as  conversions
+from {{ ref('nextdoor__campaign_report') }}   
     
 )
 
