@@ -73,7 +73,7 @@ select
 source_relation,
 date_day,
 platform,
-cast(account_id as string),
+cast(account_id as string) as account_id,
 account_name,
 clicks,
 impressions,
