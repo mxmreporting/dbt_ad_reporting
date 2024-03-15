@@ -66,6 +66,21 @@ source_relation
 ,spend
 ,conversions    
 from {{ ref('ttd_ads__account_report') }}
+
+union all
+select
+
+source_relation,
+date_day,
+platform,
+cast(account_id as string),
+account_name,
+clicks,
+impressions,
+cast(spend as FLOAT64) as spend,
+conversions
+from {{ref('nextdoor__account_report')}}
+
     
 )
 select *
